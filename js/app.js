@@ -113,9 +113,17 @@ promise.then(function (data) {
             value = Math.sqrt(value);
         }
 
+        var total = entry["Responses From"];
+        var rest = Math.round(entry["Heard of restaurant delivery"]*100 / total);
+        var noRest = Math.round(entry["No"] * 100 / total);
+        var noPrime = Math.round(entry["No Prime member"] * 100 / total);
+
         var contentString = "<b>" + dataItem.name + "</b><br>" +
-            "<b>Responses From: </b>" + entry["Responses From"] + "<br>" +
-            "<b>Prime Area?: </b>" + entry["Prime Area?"];
+            "<b>Responses From: </b>" + total + "<br>" +
+            "<b>Prime Area?: </b>" + entry["Prime Area?"] + "<br>" +
+            "<b>Heard of Restaurant Delivery: </b>" + rest + "%<br>" +
+            "<b>Not heard of Restaurant Delivery: </b>" + noRest + "%<br>" +
+            "<b>Not Prime Member: </b>" + noPrime + "%";
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString

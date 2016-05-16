@@ -77,7 +77,7 @@ map.setMapTypeId('map_style');
 // get data
 var promise = $.ajax({
     type: "POST",
-    url: "//localhost:3000/api/upload",
+    url: "http://luludust.com:3000/api/upload",
     dataType: "json"
 });
 

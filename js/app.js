@@ -65,7 +65,7 @@ var styles = [
 // Create a new StyledMapType object, passing it the array of styles,
 // as well as the name to be displayed on the map type control.
 var styledMap = new google.maps.StyledMapType(styles,
-    {name: "Styled Map"});
+    {name: "Hot Wheels Map"});
 
 var map = new google.maps.Map(document.getElementById("map"),
     mapOptions);
@@ -122,7 +122,7 @@ promise.then(function (data) {
             "<b>Responses From: </b>" + total + "<br>" +
             "<b>Prime Area?: </b>" + entry["Prime Area?"] + "<br>" +
             "<b>Heard of Restaurant Delivery: </b>" + rest + "%<br>" +
-            "<b>Not heard of Restaurant Delivery: </b>" + noRest + "%<br>" +
+            "<b>Not Heard of Restaurant Delivery: </b>" + noRest + "%<br>" +
             "<b>Not Prime Member: </b>" + noPrime + "%";
 
         var infowindow = new google.maps.InfoWindow({
